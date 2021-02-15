@@ -10,15 +10,20 @@ import { PagesComponent } from './pages.component';
 
 // App Modules
 import { SharedModule } from '../shared/shared.module';
+import { ChartsModule, ThemeService } from 'ng2-charts';
+
+import { FormsModule } from '@angular/forms';
+import { IncrementalComponent } from './incremental/incremental.component';
+import { GraphicDrawComponent } from './shared/graphic-draw/graphic-draw/graphic-draw.component';
 
 const ROUTES: Routes = [
     {
         path: 'dashboard',
         component: PagesComponent,
         children: [
-            { path: '', component: DashboardComponent },
             { path: 'progress', component: ProgressComponent },
-            { path: 'grafica1', component: Graphics1Component }
+            { path: 'grafica1', component: Graphics1Component },
+            { path: '', component: DashboardComponent }
         ]
     }
 ]
@@ -28,11 +33,15 @@ const ROUTES: Routes = [
         DashboardComponent,
         ProgressComponent,
         Graphics1Component,
-        PagesComponent
+        PagesComponent,
+        IncrementalComponent,
+        GraphicDrawComponent
     ],
     imports: [
         CommonModule,
+        FormsModule,
         RouterModule,
+        ChartsModule,
         SharedModule,
         RouterModule.forChild(ROUTES)
     ],
@@ -40,7 +49,11 @@ const ROUTES: Routes = [
         DashboardComponent,
         ProgressComponent,
         Graphics1Component,
-        PagesComponent
+        PagesComponent,
+        IncrementalComponent
+    ],
+    providers: [
+        ThemeService
     ]
 })
 export class PagesModule { }
