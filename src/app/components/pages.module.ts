@@ -15,6 +15,7 @@ import { ChartsModule, ThemeService } from 'ng2-charts';
 import { FormsModule } from '@angular/forms';
 import { IncrementalComponent } from './incremental/incremental.component';
 import { GraphicDrawComponent } from './shared/graphic-draw/graphic-draw/graphic-draw.component';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 const ROUTES: Routes = [
     {
@@ -23,6 +24,7 @@ const ROUTES: Routes = [
         children: [
             { path: 'progress', component: ProgressComponent },
             { path: 'grafica1', component: Graphics1Component },
+            { path: 'account-settings', component: AccountSettingsComponent },
             { path: '', component: DashboardComponent }
         ]
     }
@@ -35,7 +37,8 @@ const ROUTES: Routes = [
         Graphics1Component,
         PagesComponent,
         IncrementalComponent,
-        GraphicDrawComponent
+        GraphicDrawComponent,
+        AccountSettingsComponent
     ],
     imports: [
         CommonModule,
@@ -50,7 +53,8 @@ const ROUTES: Routes = [
         ProgressComponent,
         Graphics1Component,
         PagesComponent,
-        IncrementalComponent
+        IncrementalComponent,
+        AccountSettingsComponent
     ],
     providers: [
         ThemeService

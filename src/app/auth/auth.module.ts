@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -18,6 +19,7 @@ const ROUTES: Routes = [
     ],
     imports: [
         CommonModule,
+        FormsModule,
         RouterModule.forChild(ROUTES)
     ]
 })
