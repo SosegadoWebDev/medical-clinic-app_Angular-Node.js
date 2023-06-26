@@ -14,7 +14,7 @@ export class SettingService {
     }
 
     public changeTheme(theme: string): void {
-        const url = `./assets/css/colors/${theme}.css`
+        const url = `./assets/css/colors/${theme}.css`;
 
         this.linkTheme.setAttribute('href', url);
         localStorage.setItem('theme', url);

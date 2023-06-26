@@ -8,25 +8,29 @@ export class SidebarService {
     public menu: Array<any>
 
     constructor() {
-        this.menu = [
+        this.menu = [{
+            title: 'Dashboard',
+            icon: 'mdi mdi-gauge',
+            submenu: [{
+                title: 'Main',
+                url: '/'
+            },
             {
-                title: 'Dashboard',
-                icon: 'mdi mdi-gauge',
-                submenu: [
-                    {
-                        title: 'Main',
-                        url: '/'
-                    },
-                    {
-                        title: 'ProgressBar',
-                        url: 'progress'
-                    },
-                    {
-                        title: 'Graphics',
-                        url: 'grafica1'
-                    }
-                ]
-            }
-        ]
+                title: 'ProgressBar',
+                url: 'progress'
+            },
+            {
+                title: 'Graphics',
+                url: 'grafica1'
+            },
+            {
+                title: 'Promises',
+                url: 'promises'
+            },
+            {
+                title: 'rxjs',
+                url: 'rxjs'
+            }]
+        }]
     }
 }
